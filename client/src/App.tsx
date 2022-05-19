@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import ChatWindow from "./components/ChatWindow";
 import Header from "./components/Header";
+import ChatInput from "./components/ChatInput";
 import "./App.css";
 import { connect, sendMsg } from "./api";
 
-function debounce<Params extends any[]>(
+/* function debounce<Params extends any[]>(
   fn: (...args: Params) => any,
   duration: number
 ): (...args: Params) => void {
@@ -15,7 +16,7 @@ function debounce<Params extends any[]>(
       fn(...args);
     }, duration);
   };
-}
+} */
 
 function App() {
   const [chat, setChat] = useState<{ data: string }[]>([]);
@@ -28,20 +29,20 @@ function App() {
     });
   });
 
-  function send() {
+  /* function send() {
     console.log("hello");
     sendMsg("hello");
-  }
+  } */
 
-  let debouncedSend = debounce(() => {
+  /* let debouncedSend = debounce(() => {
     send();
-  }, 0);
+  }, 0); */
 
   return (
     <div className="App">
       <Header />
       <ChatWindow chat={chat} />
-      <button onClick={send}>Send "hello"</button>
+      <ChatInput sendMsg={sendMsg} />
     </div>
   );
 }

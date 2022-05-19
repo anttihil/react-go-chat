@@ -1,12 +1,27 @@
+import { useState } from "react";
 interface Props {
-  send: () => void;
+  sendMsg: (msg: any) => void;
 }
 
-const ChatInput = ({ send }: Props) => {
+const ChatInput = ({ sendMsg }: Props) => {
+  const [input, setInput] = useState("");
+
   return (
     <form>
-      <input type="text">Write here</input>
-      <button onClick={send}></button>
+      <input
+        type="text"
+        value={input}
+        onChange={(event) => setInput(event?.target.value)}
+      />
+      <button
+        onClick={(e) => {
+          e.preventDefault();
+          sendMsg(input);
+          setInput("");
+        }}
+      >
+        Send
+      </button>
     </form>
   );
 };

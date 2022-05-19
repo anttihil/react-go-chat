@@ -49,7 +49,7 @@ func setupRoutes() {
 }
 
 func main() {
-	fmt.Println("React Go Chat`")
+	fmt.Println("React Go Chat")
 	setupRoutes()
 	http.ListenAndServe(":8080", nil)
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import "./ChatWindow.css";
+import Message from "./Message";
 
 interface Props {
   chat: { data: string }[];
@@ -7,13 +8,11 @@ interface Props {
 
 const ChatWindow = ({ chat }: Props) => {
   return (
-    <div className="chat">
-      <ul className="chat__list">
-        {chat.map((msg) => (
-          <li className="chat__msg">{msg.data}</li>
-        ))}
-      </ul>
-    </div>
+    <ul className="ChatWindow">
+      {chat.map((msg) => (
+        <Message data={msg.data} />
+      ))}
+    </ul>
   );
 };
 

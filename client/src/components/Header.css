@@ -1,5 +1,9 @@
 .header {
   display: flex;
+  justify-content: center;
   font-size: larger;
+  font-weight: 600;
   font-family: "Courier New", Courier, monospace;
+  background-color: rgba(244, 202, 128, 0.45);
+  width: 100%;
 }

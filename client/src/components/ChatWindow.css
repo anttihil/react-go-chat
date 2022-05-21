@@ -1,12 +1,10 @@
-.chat {
+.ChatWindow {
+  flex-grow: 1;
+  overflow-y: scroll;
+  list-style: none;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-}
-
-.chat__list {
-  list-style: none;
-}
-
-.chat__msg {
+  justify-content: flex-end;
+  width: 24rem;
+  max-width: 100vw;
 }

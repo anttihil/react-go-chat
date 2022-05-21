@@ -24,7 +24,6 @@ function App() {
   useEffect(() => {
     connect((msg: { data: string }) => {
       console.log("New Message");
-      console.log(msg);
       setChat((chat) => [...chat, msg]);
     });
   });

@@ -1,0 +1,8 @@
+.input {
+  display: flex;
+}
+
+.input__form {
+  display: flex;
+  gap: 1rem;
+}
